@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Information Visualization</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="/d3-tip.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            background-color: #bbaddf;
+            padding-bottom: 30px;
+        }
+
+        g {
+            padding-right: 10px;
+        }
+
+        .title {
+            color: #100768
+        }
+
+        .subtitle {
+            color: #ff8fc3
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            transition: all 0.05ms
+        }
+
+        .btn {
+            border: solid 1px #100768;
+            color: #100768;
+            border-radius: 10px;
+            background-color: #7051f821;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="title mt-3">Word Happiness Index 排名比較</h1>
+    <div class='container w-50 mt-5'>
+        <h3 class="text-center">圖表說明</h3>
+        <div class='text-center mt-3'>資料來源：<a href='https://www.kaggle.com/unsdsn/world-happiness'>Kaggle</a></div>
+        <div class="mt-3">說明：此統計資料為世界幸福指數，本網頁顯示每年度的前二十名做顯示，可以選擇年份的排名，當游標hover到國家的bar上時會顯示此國當年度的其他分數指標。
+            分數越高的國家會越靠近紫色，越低的國家越靠近藍色，可以發現五年來前五高分的國家大多位於北歐。<br>
+            Ch5: 以顏色的漸變顯示分數的高低差，並且用紫色代表較為幸福的國家。<br>
+            Ch6: 按鈕選擇年份排名(Filter)，檢視不同年份內的排名。
+        </div>
+    </div>
+    <div class="mt-5">Current Year: <span id='year'>2019</span></div>
+    <div class='mt-3'>
+        <button class="btn mx-2" id='btn2015'>2015</button>
+        <button class="btn mx-2" id='btn2016'>2016</button>
+        <button class="btn mx-2" id='btn2017'>2017</button>
+        <button class="btn mx-2" id='btn2018'>2018</button>
+        <button class="btn mx-2" id='btn2019'>2019</button>
+    </div>
+
+    <svg class='mt-5'>
+    </svg>
+
+    <script type="text/javascript">
+        const link = "https://raw.githubusercontent.com/joannachou713/machinglearning/master/happiness.csv"
+        const yearList = ["2015", "2016", "2017", "2018", "2019"]
+
+
+        let df2015 = [], df2016 = [], df2017 = [], df2018 = [], df2019 = [];
+        let getData = () => {
+            return d3.csv(link, (data) => {
+                if (data.Year === '2015') {
+                    df2015.push(data)
+                } else if (data.Year === '2016') {
+                    df2016.push(data)
+                } else if (data.Year === '2017') {
+                    df2017.push(data)
+                } else if (data.Year === '2018') {
+                    df2018.push(data)
+                } else if (data.Year === '2019') {
+                    df2019.push(data)
+                }
+            })
+        }
+
+        // getData().then(() => { console.log(df2015) })
+
+
+
+        let init = (currentYr) => {
+            d3.select("svg").selectAll("*").remove();
+            let main = d3.select('svg')
+            main.style("width", '1260px').style("height", '930px')
+
+            let xScale = d3.scaleLinear()
+                .domain([0, currentYr[0]['Happiness Score']])
+                .range([0, 350])
+
+            let scaleColor = d3.scaleLinear()
+                .domain([currentYr[19]['Happiness Score'], currentYr[0]['Happiness Score']])
+                .range(['#33CCFF', '#9900FF'])
+
+            var tip = d3.tip().attr('class', 'd3-tip').direction('e').offset([0, 5])
+                .html(function (d) {
+                    var content = `<div class='ml-5 card p-3'>
+                    <span style='margin-left: 50px;'><b>`+ d['Country'] + `</b></span><br>
+                    <table style="margin-top: 2.5px;">
+                            <tr><td>Region: </td><td style="text-align: right">` + d['Region'] + `</td></tr>
+                            <tr><td>Happiness Rank: </td><td style="text-align: right">` + d['Happiness Rank'] + `</td></tr>
+                            <tr><td>Happiness Score: </td><td style="text-align: right">` + d3.format(".2f")(d['Happiness Score']) + `</td></tr>
+                            <tr><td>Economy(GDP per Capita): </td><td style="text-align: right">` + d3.format(".2f")(d['Economy (GDP per Capita)']) + `</td></tr>
+                            <tr><td>Health(Life Expectancy): </td><td style="text-align: right">` + d3.format(".2f")(d['Health (Life Expectancy)']) + `</td></tr>
+                            <tr><td>Freedom: </td><td style="text-align: right">` + d3.format(".2f")(d['Freedom']) + `</td></tr>
+                            <tr><td>Trust(Government Corruption): </td><td style="text-align: right">` + d3.format(".2f")(d['Trust (Government Corruption)']) + `</td></tr>
+                            <tr><td>Generosity: </td><td style="text-align: right">` + d3.format(".2f")(d['Generosity']) + `</td></tr>
+                            <tr><td>Year: </td><td style="text-align: right">` + (d['Year']) + `</td></tr>
+                    </table></div>
+                    `;
+                    return content;
+                });
+            main.call(tip);
+
+
+
+            let yearSet = main.selectAll('circle').data(currentYr).enter().append("g")
+            yearSet.append("rect")
+                .attr('x', 300)
+                .attr('y', (d, i) => (i + 1) * 45 - 8)
+                .attr('width', (d, i) => xScale(d['Happiness Score'])).attr("fill", (d) => scaleColor(d.num))
+                .attr('height', 25)
+                .attr("fill", (d) => scaleColor(d['Happiness Score']))
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
+
+            yearSet.append('text').text(d => d['Happiness Rank'])
+                .attr("x", 260)
+                .attr("y", (d, i) => (i + 1) * 45 + 10)
+                .attr("fill", "white")
+            yearSet.append('text').text(d => d['Country'])
+                .attr("x", 310)
+                .attr("y", (d, i) => (i + 1) * 45 + 10)
+                .attr("fill", "white")
+
+            yearSet.append('text').text(d => d3.format('.2f')(d['Happiness Score']))
+                .attr("x", (d, i) => xScale(d['Happiness Score'])+310)
+                .attr("y", (d, i) => (i + 1) * 45 + 10)
+                .attr("fill", "white")
+
+            axisLis = []
+            let axisGroup = main.append("g").attr("class", "axis")
+                .style("transform", "translateY(430px)")
+                .selectAll("line.axis")
+                .data(d3.range(10).map((d, i) => 1.25 * i))
+                .enter()
+
+            axisGroup.append("line")
+                .attr("class", "axis")
+                .attr("stroke", "#865cef")
+                .attr("y1", -400)
+                .attr("y2", 700)
+                .attr("x1", (d, i) => xScale(d) + 300)
+                .attr("x2", (d, i) => xScale(d) + 300)
+                .attr("stroke-dasharray", "5 5")
+                .style("opacity", 0.5)
+
+            axisGroup.append("text")
+                .text(d => d)
+                .attr("x", (d, i) => xScale(d) + 300)
+                .attr("y", -400)
+                .attr("fill", "#865cef")
+                .style("opacity", 0.5)
+
+
+        }
+
+
+
+
+        let btn2015 = document.querySelector('#btn2015')
+        let btn2016 = document.querySelector('#btn2016')
+        let btn2017 = document.querySelector('#btn2017')
+        let btn2018 = document.querySelector('#btn2018')
+        let btn2019 = document.querySelector('#btn2019')
+
+        btn2015.addEventListener('click', () => {
+            document.querySelector('#year').innerHTML = '2015'
+            getData().then(() => {
+                init(df2015)
+            })
+        })
+        btn2016.addEventListener('click', () => {
+            document.querySelector('#year').innerHTML = '2016'
+            getData().then(() => {
+                init(df2016)
+            })
+        })
+        btn2017.addEventListener('click', () => {
+            document.querySelector('#year').innerHTML = '2017'
+            getData().then(() => {
+                init(df2017)
+            })
+        })
+        btn2018.addEventListener('click', () => {
+            document.querySelector('#year').innerHTML = '2018'
+            getData().then(() => {
+                init(df2018)
+            })
+        })
+        btn2019.addEventListener('click', () => {
+            document.querySelector('#year').innerHTML = '2019'
+            getData().then(() => {
+                init(df2019)
+            })
+        })
+
+        // let select = document.querySelector('select')
+        // select.addEventListener('change', (e) => {
+        //     date = e.target.value
+        getData().then(() => {
+            console.log(df2015)
+            console.log(df2016)
+            console.log(df2017)
+            console.log(df2018)
+            console.log(df2019)
+            init(df2019)
+        })
+        // })
+
+    </script>
+
+</body>

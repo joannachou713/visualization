@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>103年青年勞工初次就業起薪</title>
+</head>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<div id="young_salary"></div>
+
+<body>
+  <script>
+
+    var margin = { top: 10, right: 30, bottom: 20, left: 50 },
+      width = 600 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
+
+    var svg = d3.select("#young_salary")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv("hw2.csv", function (error, data) {
+      if (error) throw error;
+
+      var subtypes = data.columns.slice(1)
+
+      // 把type秀在x軸
+      var types = d3.map(data, function (d) { return (d.type) }).keys()
+
+      // x軸
+      var x = d3.scaleBand()
+        .domain(types)
+        .range([0, width])
+        .paddingOuter([0.6])
+        .paddingInner([1.8])
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x).tickSizeOuter(0));
+
+      // Y軸
+      var y = d3.scaleLinear()
+        .domain([0, 100])
+        .range([height, 0]);
+      svg.append("g")
+        .call(d3.axisLeft(y));
+
+      //一subtype一顏色
+      var color = d3.scaleOrdinal()
+        .domain(subtypes)
+        .range(d3.schemeSet2);
+
+
+      //stack the data? --> stack per subgroup
+      var stackedData = d3.stack()
+        .keys(subtypes)
+        (data)
+
+      // 透明度
+      var mouseover = function (d) {
+
+        var subtypeName = d3.select(this.parentNode).datum().key; // This was the tricky part
+        var subtypeValue = d.data[subtypeName];
+
+        d3.selectAll(".myRect").style("opacity", 0.2)
+
+        d3.selectAll("." + subtypeName)
+          .style("opacity", 1)
+      }
+
+      var mouseleave = function (d) {
+        d3.selectAll(".myRect")
+          .style("opacity", 0.8)
+      }
+
+      let main = svg.append('g').selectAll("g").data(stackedData).enter().append("g")
+        .attr("fill", function (d) { return color(d.key); })
+        .attr("class", function (d) { return "myRect " + d.key })
+        .selectAll("rect")
+        .data(function (d) { return d; })
+        .enter().append("rect")
+        .attr("x", function (d) { return x(d.data.type); })
+        .attr("y", function (d) { return y(d[1]); })
+        .attr("height", function (d) { return y(d[0]) - y(d[1]); })
+        .attr("width", x.bandwidth())
+        .attr("stroke", "grey")
+        .on("mouseover", mouseover)
+        .on("mouseleave", mouseleave)
+
+    })
+  </script>
+
+</body>
+
+</html>

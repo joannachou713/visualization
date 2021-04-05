@@ -1,0 +1,2757 @@
+# 多變量 Project 2 - 106306035 資管三甲 簡巧恩
+
+## 1. 原始資料所有變數的 KMO 與 Bartlett 檢定表格及解說總變異量
+
+### 因數分析 - KMO 與 Bartlett 檢定
+
+<table>
+<caption class="title" style="width:302px">KMO 與 Bartlett 檢定<span class="details">KMO 與 Bartlett 檢定, 表格, 0 層欄標頭及 2 層列標頭, 具有 3 欄及 5 列的表格</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<td   colspan="2">Kaiser-Meyer-Olkin 取樣適切性量數。</td>
+<td class=" o dataAreaTop dataAreaLeft"   data-f="7397287652806414" data-i="0" >.740</td>
+</tr>
+<tr>
+<td class="rowLabels hCR role2"   rowspan="3">Bartlett 的球形檢定</td>
+<td class="rowLabels hCR vCR role3"  >近似卡方檢定</td>
+<td class=" e dataAreaLeft hCR"   data-f="930680917062" data-i="5675" >5675.931</td>
+</tr>
+<tr>
+<td class="rowLabels hCR vCR role3"  >自由度</td>
+<td class=" o dataAreaLeft hCR"   data-d="0">990</td>
+</tr>
+<tr>
+<td class="rowLabels hCR vCR role3"  >顯著性</td>
+<td class=" e dataAreaLeft hCR" >.000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+### 解說總變異量
+
+<table>
+<caption class="title" style="width:454px">解說總變異量<span class="details">解說總變異量, 表格, 2 層欄標頭及 1 層列標頭, 具有 7 欄及 62 列的表格</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<td class="cornerLabels"   rowspan="2">成分</td>
+<td class="columnLabels dataAreaLeft hCC vCC role3"   colspan="3">初始固有值</td>
+<td class="columnLabels hCC vCC role3"   colspan="3">擷取平方和負荷量</td>
+</tr>
+<tr>
+<td class="columnLabels dataAreaLeft vCC role3"  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+<td  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+</tr>
+<tr>
+<td>1</td>
+<td class=" o dataAreaTop dataAreaLeft vCC"   data-f="913545918159472" data-i="5" >5.914</td>
+<td    data-f="195768824412884">10.196</td>
+<td    data-f="195768824412884">10.196</td>
+<td    data-f="913545918159472" data-i="5" >5.914</td>
+<td    data-f="195768824412884">10.196</td>
+<td    data-f="195768824412884">10.196</td>
+</tr>
+<tr>
+<td   data-d="0">2</td>
+<td   data-f="8964358723832664" data-i="3" >3.896</td>
+<td   data-f="7179928834194245" data-i="6" >6.718</td>
+<td   data-f="913761707832307" data-i="16" >16.914</td>
+<td   data-f="8964358723832655" data-i="3" >3.896</td>
+<td   data-f="717992883419423" data-i="6" >6.718</td>
+<td   data-f="913761707832307" data-i="16" >16.914</td>
+</tr>
+<tr>
+<td   data-d="0">3</td>
+<td   data-f="262094176591725">3.262</td>
+<td   data-f="624300304468491" data-i="5" >5.624</td>
+<td   data-f="5380620123008" data-i="22" >22.538</td>
+<td   data-f="2620941765917237">3.262</td>
+<td   data-f="624300304468489" data-i="5" >5.624</td>
+<td   data-f="5380620123008" data-i="22" >22.538</td>
+</tr>
+<tr>
+<td   data-d="0">4</td>
+<td   data-f="8593391623454822" data-i="2" >2.859</td>
+<td   data-f="929895107492211" data-i="4" >4.930</td>
+<td   data-f="46795711979301">27.468</td>
+<td   data-f="859339162345483" data-i="2" >2.859</td>
+<td   data-f="929895107492213" data-i="4" >4.930</td>
+<td   data-f="467957119793013">27.468</td>
+</tr>
+<tr>
+<td   data-d="0">5</td>
+<td   data-f="4477973625225116">2.448</td>
+<td   data-f="220340280211227">4.220</td>
+<td   data-f="688297400004238" data-i="31" >31.688</td>
+<td   data-f="4477973625225102">2.448</td>
+<td   data-f="220340280211224">4.220</td>
+<td   data-f="688297400004238" data-i="31" >31.688</td>
+</tr>
+<tr>
+<td   data-d="0">6</td>
+<td   data-f="003024182753567">2.003</td>
+<td   data-f="4534899702647706">3.453</td>
+<td   data-f="14178737026901">35.142</td>
+<td   data-f="003024182753565">2.003</td>
+<td   data-f="453489970264768">3.453</td>
+<td   data-f="14178737026901">35.142</td>
+</tr>
+<tr>
+<td   data-d="0">7</td>
+<td   data-f="8714579187053026" data-i="1" >1.871</td>
+<td   data-f="2266515839746592">3.227</td>
+<td   data-f="368438954243665">38.368</td>
+<td   data-f="8714579187053026" data-i="1" >1.871</td>
+<td   data-f="2266515839746592">3.227</td>
+<td   data-f="368438954243665">38.368</td>
+</tr>
+<tr>
+<td   data-d="0">8</td>
+<td   data-f="746576213824339" data-i="1" >1.747</td>
+<td   data-f="0113382996971363">3.011</td>
+<td   data-f="3797772539408">41.380</td>
+<td   data-f="7465762138243388" data-i="1" >1.747</td>
+<td   data-f="011338299697136">3.011</td>
+<td   data-f="3797772539408">41.380</td>
+</tr>
+<tr>
+<td  data-d="0">9</td>
+<td  data-f="5034999720958384" data-i="1" >1.503</td>
+<td  data-f="5922413311997214" data-i="2" >2.592</td>
+<td  data-f="972018585140525" data-i="43" >43.972</td>
+<td  data-f="503499972095838" data-i="1" >1.503</td>
+<td  data-f="5922413311997206" data-i="2" >2.592</td>
+<td  data-f="972018585140525" data-i="43" >43.972</td>
+</tr>
+<tr>
+<td  data-d="0">10</td>
+<td  data-f="4163076428962595">1.416</td>
+<td  data-f="441909729131482">2.442</td>
+<td  data-f="413928314272006">46.414</td>
+<td  data-f="416307642896259">1.416</td>
+<td  data-f="4419097291314813">2.442</td>
+<td  data-f="413928314272006">46.414</td>
+</tr>
+<tr>
+<td  data-d="0">11</td>
+<td  data-f="3103494870589525">1.310</td>
+<td  data-f="259223253549918">2.259</td>
+<td  data-f="673151567821925" data-i="48" >48.673</td>
+<td  data-f="3103494870589525">1.310</td>
+<td  data-f="259223253549918">2.259</td>
+<td  data-f="673151567821925" data-i="48" >48.673</td>
+</tr>
+<tr>
+<td  data-d="0">12</td>
+<td  data-f="2469804317214719">1.247</td>
+<td  data-f="149966261588745">2.150</td>
+<td  data-f="82311782941067" data-i="50" >50.823</td>
+<td  data-f="2469804317214706">1.247</td>
+<td  data-f="1499662615887423">2.150</td>
+<td  data-f="82311782941067" data-i="50" >50.823</td>
+</tr>
+<tr>
+<td  data-d="0">13</td>
+<td  data-f="1879406342211372">1.188</td>
+<td  data-f="0481735072778227">2.048</td>
+<td  data-f="87129133668849" data-i="52" >52.871</td>
+<td  data-f="1879406342211358">1.188</td>
+<td  data-f="0481735072778204">2.048</td>
+<td  data-f="87129133668849" data-i="52" >52.871</td>
+</tr>
+<tr>
+<td  data-d="0">14</td>
+<td  data-f="174095660981226">1.174</td>
+<td  data-f="0243028637607345">2.024</td>
+<td  data-f="895594200449224" data-i="54" >54.896</td>
+<td  data-f="1740956609812263">1.174</td>
+<td  data-f="024302863760735">2.024</td>
+<td  data-f="89559420044923" data-i="54" >54.896</td>
+</tr>
+<tr>
+<td  data-d="0">15</td>
+<td  data-f="1483150638717237">1.148</td>
+<td  data-f="9798535583995236" data-i="1" >1.980</td>
+<td  data-f="87544775884875" data-i="56" >56.875</td>
+<td  data-f="1483150638717232">1.148</td>
+<td  data-f="9798535583995227" data-i="1" >1.980</td>
+<td  data-f="87544775884876" data-i="56" >56.875</td>
+</tr>
+<tr>
+<td  data-d="0">16</td>
+<td  data-f="0843771787476029">1.084</td>
+<td  data-f="8696158254269017" data-i="1" >1.870</td>
+<td  data-f="745063584275655" data-i="58" >58.745</td>
+<td  data-f="0843771787476029">1.084</td>
+<td  data-f="8696158254269017" data-i="1" >1.870</td>
+<td  data-f="74506358427566" data-i="58" >58.745</td>
+</tr>
+<tr>
+<td  data-d="0">17</td>
+<td  data-f="0368877699550942">1.037</td>
+<td  data-f="787737534405335" data-i="1" >1.788</td>
+<td  data-f="53280111868099" data-i="60" >60.533</td>
+<td  data-f="0368877699550934">1.037</td>
+<td  data-f="7877375344053335" data-i="1" >1.788</td>
+<td  data-f="53280111868099" data-i="60" >60.533</td>
+</tr>
+<tr>
+<td  data-d="0">18</td>
+<td  data-f="9932543117269729" data-i="0" >.993</td>
+<td  data-f="712507434012022" data-i="1" >1.713</td>
+<td  data-f="24530855269302">62.245</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">19</td>
+<td  data-f="9725603057092682" data-i="0" >.973</td>
+<td  data-f="676828113291842" data-i="1" >1.677</td>
+<td  data-f="92213666598486" data-i="63" >63.922</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">20</td>
+<td  data-f="9153969541263177" data-i="0" >.915</td>
+<td  data-f="5782706105626167" data-i="1" >1.578</td>
+<td  data-f="50040727654748" data-i="65" >65.500</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">21</td>
+<td  data-f="894876888881259" data-i="0" >.895</td>
+<td  data-f="5428911877263087" data-i="1" >1.543</td>
+<td  data-f="04329846427379">67.043</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">22</td>
+<td  data-f="8569359953012183" data-i="0" >.857</td>
+<td  data-f="4774758539676178">1.477</td>
+<td  data-f="52077431824141" data-i="68" >68.521</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">23</td>
+<td  data-f="850748589956849" data-i="0" >.851</td>
+<td  data-f="4668079137187051">1.467</td>
+<td  data-f="98758223196012" data-i="69" >69.988</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">24</td>
+<td  data-f="7976506048454804" data-i="0" >.798</td>
+<td  data-f="3752596635266905">1.375</td>
+<td  data-f="36284189548681">71.363</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">25</td>
+<td  data-f="7843501307412967" data-i="0" >.784</td>
+<td  data-f="3523278116229254">1.352</td>
+<td  data-f="71516970710974" data-i="72" >72.715</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">26</td>
+<td  data-f="7643393405405228" data-i="0" >.764</td>
+<td  data-f="317826449207798">1.318</td>
+<td  data-f="03299615631754">74.033</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">27</td>
+<td  data-f="7454917345977435" data-i="0" >.745</td>
+<td  data-f="2853305768926613">1.285</td>
+<td  data-f="3183267332102">75.318</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">28</td>
+<td  data-f="7326983277292342" data-i="0" >.733</td>
+<td  data-f="263272978843507">1.263</td>
+<td  data-f="5815997120537" data-i="76" >76.582</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">29</td>
+<td  data-f="6897564649512424" data-i="0" >.690</td>
+<td  data-f="1892352843986937">1.189</td>
+<td  data-f="7708349964524" data-i="77" >77.771</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">30</td>
+<td  data-f="6658430326776127" data-i="0" >.666</td>
+<td  data-f="1480052287545046">1.148</td>
+<td  data-f="91884022520689" data-i="78" >78.919</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">31</td>
+<td  data-f="640867046178572" data-i="0" >.641</td>
+<td  data-f="1049431830665035">1.105</td>
+<td  data-f="0237834082734">80.024</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">32</td>
+<td  data-f="6151550923060242" data-i="0" >.615</td>
+<td  data-f="0606122281138348">1.061</td>
+<td  data-f="08439563638724">81.084</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">33</td>
+<td  data-f="6033234827036823" data-i="0" >.603</td>
+<td  data-f="0402129012132455">1.040</td>
+<td  data-f="1246085376005">82.125</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">34</td>
+<td  data-f="5859502677470296" data-i="0" >.586</td>
+<td  data-f="0102590823224649">1.010</td>
+<td  data-f="13486761992296">83.135</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">35</td>
+<td  data-f="5740158883718187" data-i="0" >.574</td>
+<td  data-f="9896825661583082" data-i="0" >.990</td>
+<td  data-f="12455018608127">84.125</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">36</td>
+<td  data-f="5697887632214623" data-i="0" >.570</td>
+<td  data-f="9823944193473488" data-i="0" >.982</td>
+<td  data-f="10694460542861">85.107</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">37</td>
+<td  data-f="5353061075389384" data-i="0" >.535</td>
+<td  data-f="9229415647223075" data-i="0" >.923</td>
+<td  data-f="02988617015092">86.030</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">38</td>
+<td  data-f="5317272482644567" data-i="0" >.532</td>
+<td  data-f="9167711176973391" data-i="0" >.917</td>
+<td  data-f="94665728784825" data-i="86" >86.947</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">39</td>
+<td  data-f="5193481336073844" data-i="0" >.519</td>
+<td  data-f="8954278165644558" data-i="0" >.895</td>
+<td  data-f="8420851044127" data-i="87" >87.842</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">40</td>
+<td  data-f="4909909283823808">.491</td>
+<td  data-f="8465360834178979" data-i="0" >.847</td>
+<td  data-f="6886211878306" data-i="88" >88.689</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">41</td>
+<td  data-f="4834868827882808">.483</td>
+<td  data-f="8335980737728979" data-i="0" >.834</td>
+<td  data-f="52221926160351" data-i="89" >89.522</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">42</td>
+<td  data-f="46501101145942825">.465</td>
+<td  data-f="8017431232059108" data-i="0" >.802</td>
+<td  data-f="32396238480942">90.324</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">43</td>
+<td  data-f="4560322789176521">.456</td>
+<td  data-f="7862625498580208" data-i="0" >.786</td>
+<td  data-f="11022493466744">91.110</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">44</td>
+<td  data-f="4452833150606114">.445</td>
+<td  data-f="7677298535527782" data-i="0" >.768</td>
+<td  data-f="87795478822022" data-i="91" >91.878</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">45</td>
+<td  data-f="4365356330728527">.437</td>
+<td  data-f="7526476432290563" data-i="0" >.753</td>
+<td  data-f="63060243144928" data-i="92" >92.631</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">46</td>
+<td  data-f="4254039382901252">.425</td>
+<td  data-f="7334550660174571" data-i="0" >.733</td>
+<td  data-f="36405749746673">93.364</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">47</td>
+<td  data-f="4121406181181834">.412</td>
+<td  data-f="7105872726175576" data-i="0" >.711</td>
+<td  data-f="07464477008429">94.075</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">48</td>
+<td  data-f="39446294033693613">.394</td>
+<td  data-f="6801085178223037" data-i="0" >.680</td>
+<td  data-f="7547532879066" data-i="94" >94.755</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">49</td>
+<td  data-f="3760691771902877">.376</td>
+<td  data-f="6483951330867029" data-i="0" >.648</td>
+<td  data-f="4031484209933">95.403</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">50</td>
+<td  data-f="36285359294133535">.363</td>
+<td  data-f="6256096430023024" data-i="0" >.626</td>
+<td  data-f="02875806399561">96.029</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">51</td>
+<td  data-f="3510316528199834">.351</td>
+<td  data-f="605226987620661" data-i="0" >.605</td>
+<td  data-f="63398505161628" data-i="96" >96.634</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">52</td>
+<td  data-f="3434250433745133">.343</td>
+<td  data-f="5921121437491609" data-i="0" >.592</td>
+<td  data-f="22609719536544">97.226</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">53</td>
+<td  data-f="32313950383312773">.323</td>
+<td  data-f="5571370755743581" data-i="0" >.557</td>
+<td  data-f="7832342709398" data-i="97" >97.783</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">54</td>
+<td  data-f="3028230143592966">.303</td>
+<td  data-f="5221086454470631" data-i="0" >.522</td>
+<td  data-f="30534291638686">98.305</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">55</td>
+<td  data-f="2832066998567728">.283</td>
+<td  data-f="48828741354616007">.488</td>
+<td  data-f="79363032993302" data-i="98" >98.794</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">56</td>
+<td  data-f="24873844196199432">.249</td>
+<td  data-f="42885938269309365">.429</td>
+<td  data-f="22248971262611">99.222</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">57</td>
+<td  data-f="22884916751049683">.229</td>
+<td  data-f="39456753019051183">.395</td>
+<td  data-f="61705724281663" data-i="99" >99.617</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">58</td>
+<td  data-f="2221067991663833">.222</td>
+<td  data-f="38294275718341947">.383</td>
+<td>100.000</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+</tbody><tfoot style="display:table-footer-group">
+<tr>
+<td class="caption"  colspan="7">擷取方法：主成分分析。</td>
+</tr>
+<tr>
+<td   style="width:48px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tfoot>
+</table>
+
+## 2. 累積貢獻率或陡坡圖或特徵值大於 1 來決定因素個數
+
+### 因數分析 - 解說總變異量
+
+<table>
+<caption class="title" style="width:657px">解說總變異量<span class="details">解說總變異量, 表格, 2 層欄標頭及 1 層列標頭, 具有 10 欄及 49 列的表格</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<td class="cornerLabels"   rowspan="2">成分</td>
+<td class="columnLabels dataAreaLeft hCC vCC role3"   colspan="3">初始固有值</td>
+<td class="columnLabels hCC vCC role3"   colspan="3">擷取平方和負荷量</td>
+<td class="columnLabels hCC vCC role3"   colspan="3">旋轉平方和負荷量</td>
+</tr>
+<tr>
+<td class="columnLabels dataAreaLeft vCC role3"  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+<td  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+<td  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4.744</td>
+<td>10.543</td>
+<td>10.543</td>
+<td>4.744</td>
+<td>10.543</td>
+<td>10.543</td>
+<td>3.192</td>
+<td>7.093</td>
+<td>7.093</td>
+</tr>
+<tr>
+<td   data-d="0">2</td>
+<td   data-f="519295706249594" data-i="3" >3.519</td>
+<td   data-f="820657124999098" data-i="7" >7.821</td>
+<td   data-f="36324106115584">18.363</td>
+<td   data-f="5192957062495944" data-i="3" >3.519</td>
+<td   data-f="820657124999099" data-i="7" >7.821</td>
+<td   data-f="36324106115584">18.363</td>
+<td   data-f="8815899414885897" data-i="2" >2.882</td>
+<td   data-f="403533203307978">6.404</td>
+<td   data-f="496940978160943">13.497</td>
+</tr>
+<tr>
+<td   data-d="0">3</td>
+<td   data-f="8527446104097622" data-i="2" >2.853</td>
+<td   data-f="339432467577249">6.339</td>
+<td   data-f="70267352873309" data-i="24" >24.703</td>
+<td   data-f="8527446104097622" data-i="2" >2.853</td>
+<td   data-f="339432467577249">6.339</td>
+<td   data-f="70267352873309" data-i="24" >24.703</td>
+<td   data-f="7450313993739965" data-i="2" >2.745</td>
+<td   data-f="1000697763866585">6.100</td>
+<td   data-f="5970107545476" data-i="19" >19.597</td>
+</tr>
+<tr>
+<td   data-d="0">4</td>
+<td   data-f="350745810281147">2.351</td>
+<td   data-f="223879578402549">5.224</td>
+<td   data-f="92655310713564" data-i="29" >29.927</td>
+<td   data-f="350745810281146">2.351</td>
+<td   data-f="2238795784025465">5.224</td>
+<td   data-f="926553107135636" data-i="29" >29.927</td>
+<td   data-f="356072871030607">2.356</td>
+<td   data-f="235717491179127">5.236</td>
+<td   data-f="832728245726727" data-i="24" >24.833</td>
+</tr>
+<tr>
+<td   data-d="0">5</td>
+<td   data-f="1756810446079355">2.176</td>
+<td   data-f="834846765795412" data-i="4" >4.835</td>
+<td   data-f="76139987293105" data-i="34" >34.761</td>
+<td   data-f="1756810446079347">2.176</td>
+<td   data-f="83484676579541" data-i="4" >4.835</td>
+<td   data-f="761399872931044" data-i="34" >34.761</td>
+<td   data-f="225730823225768">2.226</td>
+<td   data-f="946068496057262" data-i="4" >4.946</td>
+<td   data-f="77879674178399" data-i="29" >29.779</td>
+</tr>
+<tr>
+<td   data-d="0">6</td>
+<td   data-f="7346069934674746" data-i="1" >1.735</td>
+<td   data-f="854682207705499" data-i="3" >3.855</td>
+<td   data-f="61608208063655" data-i="38" >38.616</td>
+<td   data-f="734606993467475" data-i="1" >1.735</td>
+<td   data-f="8546822077055003" data-i="3" >3.855</td>
+<td   data-f="616082080636545" data-i="38" >38.616</td>
+<td   data-f="9298566700162847" data-i="1" >1.930</td>
+<td   data-f="288570377813966">4.289</td>
+<td   data-f="067367119597954">34.067</td>
+</tr>
+<tr>
+<td   data-d="0">7</td>
+<td   data-f="5285045269932795" data-i="1" >1.529</td>
+<td   data-f="3966767266517324">3.397</td>
+<td   data-f="012758807288286">42.013</td>
+<td   data-f="5285045269932802" data-i="1" >1.529</td>
+<td   data-f="3966767266517337">3.397</td>
+<td   data-f="01275880728828">42.013</td>
+<td   data-f="846194465147515" data-i="1" >1.846</td>
+<td   data-f="102654366994478">4.103</td>
+<td   data-f="17002148659243">38.170</td>
+</tr>
+<tr>
+<td   data-d="0">8</td>
+<td   data-f="432633878145377">1.433</td>
+<td   data-f="1836308403230595">3.184</td>
+<td   data-f="19638964761135">45.196</td>
+<td   data-f="4326338781453771">1.433</td>
+<td   data-f="1836308403230604">3.184</td>
+<td   data-f="19638964761134">45.196</td>
+<td   data-f="8188715376804825" data-i="1" >1.819</td>
+<td   data-f="041936750401072">4.042</td>
+<td   data-f="2119582369935">42.212</td>
+</tr>
+<tr>
+<td  data-d="0">9</td>
+<td  data-f="2849833989914734">1.285</td>
+<td  data-f="8555186644254964" data-i="2" >2.856</td>
+<td  data-f="05190831203684">48.052</td>
+<td  data-f="2849833989914736">1.285</td>
+<td  data-f="855518664425497" data-i="2" >2.856</td>
+<td  data-f="051908312036836">48.052</td>
+<td  data-f="8083225368002616" data-i="1" >1.808</td>
+<td  data-f="018494526222804">4.018</td>
+<td  data-f="230452763216306">46.230</td>
+</tr>
+<tr>
+<td  data-d="0">10</td>
+<td  data-f="2317317578892608">1.232</td>
+<td  data-f="737181684198357" data-i="2" >2.737</td>
+<td  data-f="7890899962352" data-i="50" >50.789</td>
+<td  data-f="2317317578892613">1.232</td>
+<td  data-f="7371816841983585" data-i="2" >2.737</td>
+<td  data-f="7890899962352" data-i="50" >50.789</td>
+<td  data-f="5713383071602174" data-i="1" >1.571</td>
+<td  data-f="491862904800483">3.492</td>
+<td  data-f="72231566801679" data-i="49" >49.722</td>
+</tr>
+<tr>
+<td  data-d="0">11</td>
+<td  data-f="153739160921168">1.154</td>
+<td  data-f="56386480204704" data-i="2" >2.564</td>
+<td  data-f="35295479828224">53.353</td>
+<td  data-f="153739160921168">1.154</td>
+<td  data-f="56386480204704" data-i="2" >2.564</td>
+<td  data-f="35295479828224">53.353</td>
+<td  data-f="5246911584865088" data-i="1" >1.525</td>
+<td  data-f="3882025744144637">3.388</td>
+<td  data-f="110518242431255">53.111</td>
+</tr>
+<tr>
+<td  data-d="0">12</td>
+<td  data-f="136990889155982">1.137</td>
+<td  data-f="5266464203466263" data-i="2" >2.527</td>
+<td  data-f="87960121862886" data-i="55" >55.880</td>
+<td  data-f="1369908891559815">1.137</td>
+<td  data-f="5266464203466255" data-i="2" >2.527</td>
+<td  data-f="87960121862886" data-i="55" >55.880</td>
+<td  data-f="2460873392889242">1.246</td>
+<td  data-f="7690829761976095" data-i="2" >2.769</td>
+<td  data-f="87960121862886" data-i="55" >55.880</td>
+</tr>
+<tr>
+<td  data-d="0">13</td>
+<td  data-f="0824598456989138">1.082</td>
+<td  data-f="405466323775364">2.405</td>
+<td  data-f="28506754240423">58.285</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">14</td>
+<td  data-f="0138094701750768">1.014</td>
+<td  data-f="252909933722393">2.253</td>
+<td  data-f="53797747612662" data-i="60" >60.538</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">15</td>
+<td  data-f="9798723440165331" data-i="0" >.980</td>
+<td  data-f="177494097814518">2.177</td>
+<td  data-f="71547157394114" data-i="62" >62.715</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">16</td>
+<td  data-f="9423866768319233" data-i="0" >.942</td>
+<td  data-f="0941926151820516">2.094</td>
+<td  data-f="80966418912318" data-i="64" >64.810</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">17</td>
+<td  data-f="8758030794089463" data-i="0" >.876</td>
+<td  data-f="9462290653532142" data-i="1" >1.946</td>
+<td  data-f="75589325447639" data-i="66" >66.756</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">18</td>
+<td  data-f="8690999332518027" data-i="0" >.869</td>
+<td  data-f="9313331850040059" data-i="1" >1.931</td>
+<td  data-f="6872264394804" data-i="68" >68.687</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">19</td>
+<td  data-f="8219970109869837" data-i="0" >.822</td>
+<td  data-f="8266600244155193" data-i="1" >1.827</td>
+<td  data-f="51388646389591" data-i="70" >70.514</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">20</td>
+<td  data-f="8074654094720385" data-i="0" >.807</td>
+<td  data-f="79436757660453" data-i="1" >1.794</td>
+<td  data-f="30825404050044">72.308</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">21</td>
+<td  data-f="781752766471706" data-i="0" >.782</td>
+<td  data-f="7372283699371245" data-i="1" >1.737</td>
+<td  data-f="04548241043757">74.045</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">22</td>
+<td  data-f="7182080253342286" data-i="0" >.718</td>
+<td  data-f="5960178340760633" data-i="1" >1.596</td>
+<td  data-f="64150024451364" data-i="75" >75.642</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">23</td>
+<td  data-f="6894489701574511" data-i="0" >.689</td>
+<td  data-f="5321088225721136" data-i="1" >1.532</td>
+<td  data-f="17360906708575">77.174</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">24</td>
+<td  data-f="6767981067396001" data-i="0" >.677</td>
+<td  data-f="5039957927546668" data-i="1" >1.504</td>
+<td  data-f="67760485984041" data-i="78" >78.678</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">25</td>
+<td  data-f="651174974238119" data-i="0" >.651</td>
+<td  data-f="447055498306931">1.447</td>
+<td  data-f="12466035814735">80.125</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">26</td>
+<td  data-f="6263669406950584" data-i="0" >.626</td>
+<td  data-f="3919265348779075">1.392</td>
+<td  data-f="51658689302526" data-i="81" >81.517</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">27</td>
+<td  data-f="6104242784213209" data-i="0" >.610</td>
+<td  data-f="3564983964918242">1.356</td>
+<td  data-f="87308528951709" data-i="82" >82.873</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">28</td>
+<td  data-f="599497847157331" data-i="0" >.599</td>
+<td  data-f="3322174381274021">1.332</td>
+<td  data-f="2053027276445">84.205</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">29</td>
+<td  data-f="5653626239841782" data-i="0" >.565</td>
+<td  data-f="2563613866315073">1.256</td>
+<td  data-f="461664114276">85.462</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">30</td>
+<td  data-f="5547735422588539" data-i="0" >.555</td>
+<td  data-f="2328300939085641">1.233</td>
+<td  data-f="69449420818457" data-i="86" >86.694</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">31</td>
+<td  data-f="5393965488970335" data-i="0" >.539</td>
+<td  data-f="1986589975489632">1.199</td>
+<td  data-f="89315320573353" data-i="87" >87.893</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">32</td>
+<td  data-f="526179024019779" data-i="0" >.526</td>
+<td  data-f="1692867200439534">1.169</td>
+<td  data-f="06243992577748">89.062</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">33</td>
+<td  data-f="5036946742955964" data-i="0" >.504</td>
+<td  data-f="1193214984346587">1.119</td>
+<td  data-f="18176142421214">90.182</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">34</td>
+<td  data-f="49417767007361196">.494</td>
+<td  data-f="098172600163582">1.098</td>
+<td  data-f="27993402437572">91.280</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">35</td>
+<td  data-f="46530750994700776">.465</td>
+<td  data-f="0340166887711284">1.034</td>
+<td  data-f="31395071314685">92.314</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">36</td>
+<td  data-f="439157397036517">.439</td>
+<td  data-f="9759053267478156" data-i="0" >.976</td>
+<td  data-f="28985603989467">93.290</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">37</td>
+<td  data-f="4259053165160368">.426</td>
+<td  data-f="9464562589245263" data-i="0" >.946</td>
+<td  data-f="2363122988192">94.236</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">38</td>
+<td  data-f="40037610053800093">.400</td>
+<td  data-f="8897246678622243" data-i="0" >.890</td>
+<td  data-f="12603696668143">95.126</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">39</td>
+<td  data-f="3940864557751316">.394</td>
+<td  data-f="8757476795002925" data-i="0" >.876</td>
+<td  data-f="00178464618172">96.002</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">40</td>
+<td  data-f="356292004311162">.356</td>
+<td  data-f="79176000958036" data-i="0" >.792</td>
+<td  data-f="79354465576208" data-i="96" >96.794</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">41</td>
+<td  data-f="3394770764186197">.339</td>
+<td  data-f="7543935031524882" data-i="0" >.754</td>
+<td  data-f="54793815891456" data-i="97" >97.548</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">42</td>
+<td  data-f="3148813911123707">.315</td>
+<td  data-f="6997364246941571" data-i="0" >.700</td>
+<td  data-f="24767458360871">98.248</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">43</td>
+<td  data-f="3084155805891804">.308</td>
+<td  data-f="6853679568648453" data-i="0" >.685</td>
+<td  data-f="93304254047356" data-i="98" >98.933</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">44</td>
+<td  data-f="24944364930116034">.249</td>
+<td  data-f="5543192206692452" data-i="0" >.554</td>
+<td  data-f="48736176114281">99.487</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">45</td>
+<td  data-f="23068720748573393">.231</td>
+<td  data-f="5126382388571865" data-i="0" >.513</td>
+<td>100.000</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+</tbody><tfoot style="display:table-footer-group">
+<tr>
+<td class="caption"  colspan="10">擷取方法：主成分分析。</td>
+</tr>
+<tr>
+<td   style="width:48px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tfoot>
+</table>
+
+### 因數分析 - 陡坡圖
+
+![](https://i.imgur.com/TNC4gIR.png)
+
+### 由陡坡圖決定變數個數為 11~15 個
+
+## 3. 轉軸後的成份矩陣、共同性及 KMO 與 Bartlett 檢定
+
+### 轉軸後的成分矩陣
+
+<table>
+<caption class="title" style="width:964px" title="a. 在 10 反覆運算中收斂旋轉。">旋轉成分矩陣<sup>a</sup><span class="details">旋轉成分矩陣, 表格, 2 層欄標頭及 1 層列標頭, 具有 13 欄及 50 列的表格</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<td class="cornerLabels"   rowspan="2">&nbsp;</td>
+<td class="columnLabels dataAreaLeft hCC vCC role1"   colspan="12">成分</td>
+</tr>
+<tr>
+<td class="columnLabels dataAreaLeft vCC role3"   data-d="0">1</td>
+<td   data-d="0">2</td>
+<td   data-d="0">3</td>
+<td   data-d="0">4</td>
+<td   data-d="0">5</td>
+<td   data-d="0">6</td>
+<td   data-d="0">7</td>
+<td   data-d="0">8</td>
+<td   data-d="0">9</td>
+<td  data-d="0">10</td>
+<td  data-d="0">11</td>
+<td  data-d="0">12</td>
+</tr>
+<tr>
+<td  >我會和父母分享我的生活和心事</td>
+<td class=" o dataAreaTop dataAreaLeft vCC"   data-f="718594794969735" data-i="0" >.719</td>
+<td  >&nbsp;</td>
+<td  >&nbsp;</td>
+<td  >&nbsp;</td>
+<td  >&nbsp;</td>
+<td  >&nbsp;</td>
+<td  >&nbsp;</td>
+<td  >&nbsp;</td>
+<td  >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  >空閒時，我喜歡和家人相聚在一起</td>
+<td   data-f="684769907654534" data-i="0" >.685</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td  >我對生活的安排或規劃會以父母為優先考量</td>
+<td   data-f="6790041661602234" data-i="0" >.679</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td  >就算結了婚，我也要和父母一起住或是要能就近照顧</td>
+<td   data-f="655852962438576" data-i="0" >.656</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td  >無論發生什麼事，我家人都會和我一起解決</td>
+<td   data-f="6781950171227114" data-i="0" >.678</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td  >無論如何子女都應該孝順父母</td>
+<td   data-f="45745783734051104">.457</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td  >我不太認同我父母的想法和做法</td>
+<td   data-f="516361991129333" data-i="0" >.516</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td  >人這輩子應該要結婚才對</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td   data-f="8094075231272159" data-i="0" >.809</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td >有了子女，才是一個完整的家</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7593319198574185" data-i="0" >.759</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >結婚是一輩子的承諾</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="4114201483204978">.411</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我的婚姻生活不一定要有小孩</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7447839396470255" data-i="0" >.745</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我能夠獨立、快樂地生活，不結婚也無所謂</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7197450278614199" data-i="0" >.720</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我不能接受要和對方父母一起同住的婚姻生活</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >花多一點錢購買名牌商品是值得的</td>
+<td>&nbsp;</td>
+<td  data-f="8066584672788496" data-i="0" >.807</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我寧願購買知名品牌的產品，感覺品質較有保障</td>
+<td>&nbsp;</td>
+<td  data-f="8030140704220359" data-i="0" >.803</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我買過很多其實並不需要的東西</td>
+<td>&nbsp;</td>
+<td  data-f="7876444737480192" data-i="0" >.788</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我會花錢去營造生活中的趣味</td>
+<td>&nbsp;</td>
+<td  data-f="5319808477408955" data-i="0" >.532</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >即使價錢貴一點，我還是喜歡買進口產品</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >只有在網路世界中我才能真正放鬆，表達內心最真實的想法</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7772093452312121" data-i="0" >.777</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >如果一天不上網，我會擔心跟不上朋友的話題</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="6957539171411536" data-i="0" >.696</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我喜歡和網友分享我的生活點滴</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7199029912783038" data-i="0" >.720</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >網路幫助我和朋友能更進一步的交流，更加瞭解彼此</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="6270708251721552" data-i="0" >.627</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我有儲蓄的習慣</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7719060117552492" data-i="0" >.772</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我通常收支平衡，不會入不敷出</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7456866304496367" data-i="0" >.746</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我常搞不清楚錢花到哪裡去了</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="682993069901495" data-i="0" >.683</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >如果我有足夠的錢，我就不會想再工作了</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >有些心事我會跟朋友講，但不會跟另ㄧ半說</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0"  data-f="6872788282696958" data-i="0" >.687</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >友情通常比愛情更長久</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0"  data-f="6452933055949385" data-i="0" >.645</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >在結婚前我會仔細評估對方的家庭狀況</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0"  data-f="412385478676092">.412</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我喜歡平平凡凡、簡簡單單的生活</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7125595987706063" data-i="0" >.713</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >生活應該要及時行樂，多想未來是不必要的</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="5884594679814983" data-i="0" >.588</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >每完成一件小小的事，我就可以快樂很久</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="5465489962937274" data-i="0" >.547</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我不會讓工作影響我的休閒生活</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2"  data-f="512730005400423" data-i="-" >-.513</td>
+</tr>
+<tr>
+<td >工作是我的生活重心</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2"  data-f="7675795469257841" data-i="0" >.768</td>
+</tr>
+<tr>
+<td >我和我朋友的喜好很相似</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="5086467273484343" data-i="0" >.509</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >空閒時，我會呼朋引伴找朋友出去玩</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="6759604145066618" data-i="0" >.676</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我喜歡和朋友在一起的時光，更勝於自己獨處時</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7704930998339453" data-i="0" >.770</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我很在乎朋友是否重視我的提議或想法</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1"  data-f="48812361385342">.488</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我欣賞工作能力強的女性</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7670374368419604" data-i="0" >.767</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我願意和能力強的女性一起工作</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>.775</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >夫妻雙方都應該有屬於自己的事業發展</td>
+<td class=" o dataAreaLeft hCR vCC">&nbsp;</td>
+<td>&nbspnbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td >&nbsp;</td>
+<td   data-f="5782900437804406" data-i="0" >.578</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td >我的穿著打扮具有獨特的風格</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="7553374635934014" data-i="0" >.755</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我能配合不同場合的需要，調整自己的裝扮風格</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="728288562622021" data-i="0" >.728</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我積極使用各種投資理財工具</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  data-f="5173156001091835" data-i="0" >.517</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+<tr>
+<td >我享受物質為生活所帶來的滿足感</td>
+<td>&nbsp;</td>
+<td  data-f="48965049100911123">.490</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td 0">&nbsp;</td>
+<td 1">&nbsp;</td>
+<td 2">&nbsp;</td>
+</tr>
+</tbody><tfoot style="display:table-footer-group">
+<tr>
+<td class="caption"  colspan="13">擷取方法：主成分分析。 <br> 轉軸方法：使用 Kaiser 正規化的最大變異法。</td>
+</tr>
+<tr>
+<td class="footnotes"  colspan="13">a. 在 10 反覆運算中收斂旋轉。</td>
+</tr>
+<tr>
+<td   style="width:160px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tfoot>
+</table>
+
+### 共同性
+
+<table>
+<caption class="title" style="width:294px">共同性<span class="details">共同性, 表格, 1 層欄標頭及 1 層列標頭, 具有 3 欄及 48 列的表格</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<td class="cornerLabels"  >&nbsp;</td>
+<td class="columnLabels dataAreaLeft vCC role3"  >初始</td>
+<td  >萃取</td>
+</tr>
+<tr>
+<td  >我會和父母分享我的生活和心事</td>
+<td class=" e dataAreaTop dataAreaLeft vCC" >1.000</td>
+<td class=" e dataAreaTop vCC"   data-f="5715740659217483" data-i="0" >.572</td>
+</tr>
+<tr>
+<td  >空閒時，我喜歡和家人相聚在一起</td>
+<td >1.000</td>
+<td   data-f="5507043227602421" data-i="0" >.551</td>
+</tr>
+<tr>
+<td  >我對生活的安排或規劃會以父母為優先考量</td>
+<td >1.000</td>
+<td   data-f="5338176882629221" data-i="0" >.534</td>
+</tr>
+<tr>
+<td  >就算結了婚，我也要和父母一起住或是要能就近照顧</td>
+<td >1.000</td>
+<td   data-f="5216217393904576" data-i="0" >.522</td>
+</tr>
+<tr>
+<td  >無論發生什麼事，我家人都會和我一起解決</td>
+<td >1.000</td>
+<td   data-f="5374837442660226" data-i="0" >.537</td>
+</tr>
+<tr>
+<td  >無論如何子女都應該孝順父母</td>
+<td >1.000</td>
+<td   data-f="45158369023318545">.452</td>
+</tr>
+<tr>
+<td  >我不太認同我父母的想法和做法</td>
+<td >1.000</td>
+<td   data-f="40618272988555626">.406</td>
+</tr>
+<tr>
+<td  >人這輩子應該要結婚才對</td>
+<td >1.000</td>
+<td   data-f="7149981470781802" data-i="0" >.715</td>
+</tr>
+<tr>
+<td  >有了子女，才是一個完整的家</td>
+<td >1.000</td>
+<td   data-f="6470603628679581" data-i="0" >.647</td>
+</tr>
+<tr>
+<td >結婚是一輩子的承諾</td>
+<td>1.000</td>
+<td  data-f="5718470436333649" data-i="0" >.572</td>
+</tr>
+<tr>
+<td >我的婚姻生活不一定要有小孩</td>
+<td>1.000</td>
+<td  data-f="6375450473147312" data-i="0" >.638</td>
+</tr>
+<tr>
+<td >我能夠獨立、快樂地生活，不結婚也無所謂</td>
+<td>1.000</td>
+<td  data-f="6106034141594106" data-i="0" >.611</td>
+</tr>
+<tr>
+<td >我不能接受要和對方父母一起同住的婚姻生活</td>
+<td>1.000</td>
+<td  data-f="3413711256748625">.341</td>
+</tr>
+<tr>
+<td >花多一點錢購買名牌商品是值得的</td>
+<td>1.000</td>
+<td  data-f="7046882028621251" data-i="0" >.705</td>
+</tr>
+<tr>
+<td >我寧願購買知名品牌的產品，感覺品質較有保障</td>
+<td>1.000</td>
+<td  data-f="672494482445351" data-i="0" >.672</td>
+</tr>
+<tr>
+<td >我買過很多其實並不需要的東西</td>
+<td>1.000</td>
+<td  data-f="6470850853168217" data-i="0" >.647</td>
+</tr>
+<tr>
+<td >我會花錢去營造生活中的趣味</td>
+<td>1.000</td>
+<td  data-f="4920935169106931">.492</td>
+</tr>
+<tr>
+<td >即使價錢貴一點，我還是喜歡買進口產品</td>
+<td>1.000</td>
+<td  data-f="43930691807477407">.439</td>
+</tr>
+<tr>
+<td >只有在網路世界中我才能真正放鬆，表達內心最真實的想法</td>
+<td>1.000</td>
+<td  data-f="6674701556919231" data-i="0" >.667</td>
+</tr>
+<tr>
+<td >如果一天不上網，我會擔心跟不上朋友的話題</td>
+<td>1.000</td>
+<td  data-f="5793385720889112" data-i="0" >.579</td>
+</tr>
+<tr>
+<td >我喜歡和網友分享我的生活點滴</td>
+<td>1.000</td>
+<td  data-f="6488760576739835" data-i="0" >.649</td>
+</tr>
+<tr>
+<td >網路幫助我和朋友能更進一步的交流，更加瞭解彼此</td>
+<td>1.000</td>
+<td  data-f="5353066671075446" data-i="0" >.535</td>
+</tr>
+<tr>
+<td >我有儲蓄的習慣</td>
+<td>1.000</td>
+<td  data-f="6517199973438358" data-i="0" >.652</td>
+</tr>
+<tr>
+<td >我通常收支平衡，不會入不敷出</td>
+<td>1.000</td>
+<td  data-f="5787112860623556" data-i="0" >.579</td>
+</tr>
+<tr>
+<td >我常搞不清楚錢花到哪裡去了</td>
+<td>1.000</td>
+<td  data-f="5763174942284205" data-i="0" >.576</td>
+</tr>
+<tr>
+<td >如果我有足夠的錢，我就不會想再工作了</td>
+<td>1.000</td>
+<td  data-f="29684769912096365">.297</td>
+</tr>
+<tr>
+<td >有些心事我會跟朋友講，但不會跟另ㄧ半說</td>
+<td>1.000</td>
+<td  data-f="5466577041974601" data-i="0" >.547</td>
+</tr>
+<tr>
+<td >友情通常比愛情更長久</td>
+<td>1.000</td>
+<td  data-f="553694151944547" data-i="0" >.554</td>
+</tr>
+<tr>
+<td >在結婚前我會仔細評估對方的家庭狀況</td>
+<td>1.000</td>
+<td  data-f="4866479069574984">.487</td>
+</tr>
+<tr>
+<td >我喜歡平平凡凡、簡簡單單的生活</td>
+<td>1.000</td>
+<td  data-f="5441203535594537" data-i="0" >.544</td>
+</tr>
+<tr>
+<td >生活應該要及時行樂，多想未來是不必要的</td>
+<td>1.000</td>
+<td  data-f="5125531798893881" data-i="0" >.513</td>
+</tr>
+<tr>
+<td >每完成一件小小的事，我就可以快樂很久</td>
+<td>1.000</td>
+<td  data-f="5372308433588084" data-i="0" >.537</td>
+</tr>
+<tr>
+<td >我不會讓工作影響我的休閒生活</td>
+<td>1.000</td>
+<td  data-f="5315961308721547" data-i="0" >.532</td>
+</tr>
+<tr>
+<td >工作是我的生活重心</td>
+<td>1.000</td>
+<td  data-f="6476070981804166" data-i="0" >.648</td>
+</tr>
+<tr>
+<td >我和我朋友的喜好很相似</td>
+<td>1.000</td>
+<td  data-f="4365831775727001">.437</td>
+</tr>
+<tr>
+<td >空閒時，我會呼朋引伴找朋友出去玩</td>
+<td>1.000</td>
+<td  data-f="6285296384879472" data-i="0" >.629</td>
+</tr>
+<tr>
+<td >我喜歡和朋友在一起的時光，更勝於自己獨處時</td>
+<td>1.000</td>
+<td  data-f="6517141758081422" data-i="0" >.652</td>
+</tr>
+<tr>
+<td >我很在乎朋友是否重視我的提議或想法</td>
+<td>1.000</td>
+<td  data-f="5577622306754647" data-i="0" >.558</td>
+</tr>
+<tr>
+<td >我欣賞工作能力強的女性</td>
+<td>1.000</td>
+<td  data-f="653509304985775" data-i="0" >.654</td>
+</tr>
+<tr>
+<td >我願意和能力強的女性一起工作</td>
+<td>1.000</td>
+<td  data-f="6587675217338009" data-i="0" >.659</td>
+</tr>
+<tr>
+<td >夫妻雙方都應該有屬於自己的事業發展</td>
+<td>1.000</td>
+<td  data-f="5125625774052869" data-i="0" >.513</td>
+</tr>
+<tr>
+<td >我的穿著打扮具有獨特的風格</td>
+<td class=" o dataAreaLeft hCR vCC">1.000</td>
+<td  data-f="6315755250402453" data-i="0" >.632</td>
+</tr>
+<tr>
+<td >我能配合不同場合的需要，調整自己的裝扮風格</td>
+<td>1.000</td>
+<td  data-f="5941056720693743" data-i="0" >.594</td>
+</tr>
+<tr>
+<td >我積極使用各種投資理財工具</td>
+<td>1.000</td>
+<td  data-f="4574619250188315">.457</td>
+</tr>
+<tr>
+<td >我享受物質為生活所帶來的滿足感</td>
+<td>1.000</td>
+<td  data-f="416492174249349">.416</td>
+</tr>
+</tbody><tfoot style="display:table-footer-group">
+<tr>
+<td class="caption"  colspan="3">擷取方法：主成分分析。</td>
+</tr>
+<tr>
+<td   style="width:160px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tfoot>
+</table>
+
+### 因數分析 - KMO 與 Bartlett 檢定
+
+<table><tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<td   colspan="2">Kaiser-Meyer-Olkin 取樣適切性量數。</td>
+<td class=" o dataAreaTop dataAreaLeft"   data-f="7397287652806414" data-i="0" >.740</td>
+</tr>
+<tr>
+<td class="rowLabels hCR role2"   rowspan="3">Bartlett 的球形檢定</td>
+<td class="rowLabels hCR vCR role3"  >近似卡方檢定</td>
+<td class=" e dataAreaLeft hCR"   data-f="930680917062" data-i="5675" >5675.931</td>
+</tr>
+<tr>
+<td class="rowLabels hCR vCR role3"  >自由度</td>
+<td class=" o dataAreaLeft hCR"   data-d="0">990</td>
+</tr>
+<tr>
+<td class="rowLabels hCR vCR role3"  >顯著性</td>
+<td class=" e dataAreaLeft hCR" >.000</td>
+</tr>
+<tr>
+<td   style="width:120px;padding:0px;border-spacing:0px"></td>
+<td   style="width:111px;padding:0px;border-spacing:0px"></td>
+<td   style="width:71px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tbody></table>
+
+### 解說總變異量
+
+<table>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<td class="cornerLabels"   rowspan="2">成分</td>
+<td class="columnLabels dataAreaLeft hCC vCC role3"   colspan="3">初始固有值</td>
+<td class="columnLabels hCC vCC role3"   colspan="3">擷取平方和負荷量</td>
+<td class="columnLabels hCC vCC role3"   colspan="3">旋轉平方和負荷量</td>
+</tr>
+<tr>
+<td class="columnLabels dataAreaLeft vCC role3"  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+<td  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+<td  >總計</td>
+<td  >變異的 %</td>
+<td  >累加 %</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4.744</td>
+<td>10.543</td>
+<td>10.543</td>
+<td>4.744</td>
+<td>10.543</td>
+<td>10.543</td>
+<td>3.192</td>
+<td>7.093</td>
+<td>7.093</td>
+</tr>
+<tr>
+<td   data-d="0">2</td>
+<td   data-f="519295706249594" data-i="3" >3.519</td>
+<td   data-f="820657124999098" data-i="7" >7.821</td>
+<td   data-f="36324106115584">18.363</td>
+<td   data-f="5192957062495944" data-i="3" >3.519</td>
+<td   data-f="820657124999099" data-i="7" >7.821</td>
+<td   data-f="36324106115584">18.363</td>
+<td   data-f="8815899414885897" data-i="2" >2.882</td>
+<td   data-f="403533203307978">6.404</td>
+<td   data-f="496940978160943">13.497</td>
+</tr>
+<tr>
+<td   data-d="0">3</td>
+<td   data-f="8527446104097622" data-i="2" >2.853</td>
+<td   data-f="339432467577249">6.339</td>
+<td   data-f="70267352873309" data-i="24" >24.703</td>
+<td   data-f="8527446104097622" data-i="2" >2.853</td>
+<td   data-f="339432467577249">6.339</td>
+<td   data-f="70267352873309" data-i="24" >24.703</td>
+<td   data-f="7450313993739965" data-i="2" >2.745</td>
+<td   data-f="1000697763866585">6.100</td>
+<td   data-f="5970107545476" data-i="19" >19.597</td>
+</tr>
+<tr>
+<td   data-d="0">4</td>
+<td   data-f="350745810281147">2.351</td>
+<td   data-f="223879578402549">5.224</td>
+<td   data-f="92655310713564" data-i="29" >29.927</td>
+<td   data-f="350745810281146">2.351</td>
+<td   data-f="2238795784025465">5.224</td>
+<td   data-f="926553107135636" data-i="29" >29.927</td>
+<td   data-f="356072871030607">2.356</td>
+<td   data-f="235717491179127">5.236</td>
+<td   data-f="832728245726727" data-i="24" >24.833</td>
+</tr>
+<tr>
+<td   data-d="0">5</td>
+<td   data-f="1756810446079355">2.176</td>
+<td   data-f="834846765795412" data-i="4" >4.835</td>
+<td   data-f="76139987293105" data-i="34" >34.761</td>
+<td   data-f="1756810446079347">2.176</td>
+<td   data-f="83484676579541" data-i="4" >4.835</td>
+<td   data-f="761399872931044" data-i="34" >34.761</td>
+<td   data-f="225730823225768">2.226</td>
+<td   data-f="946068496057262" data-i="4" >4.946</td>
+<td   data-f="77879674178399" data-i="29" >29.779</td>
+</tr>
+<tr>
+<td   data-d="0">6</td>
+<td   data-f="7346069934674746" data-i="1" >1.735</td>
+<td   data-f="854682207705499" data-i="3" >3.855</td>
+<td   data-f="61608208063655" data-i="38" >38.616</td>
+<td   data-f="734606993467475" data-i="1" >1.735</td>
+<td   data-f="8546822077055003" data-i="3" >3.855</td>
+<td   data-f="616082080636545" data-i="38" >38.616</td>
+<td   data-f="9298566700162847" data-i="1" >1.930</td>
+<td   data-f="288570377813966">4.289</td>
+<td   data-f="067367119597954">34.067</td>
+</tr>
+<tr>
+<td   data-d="0">7</td>
+<td   data-f="5285045269932795" data-i="1" >1.529</td>
+<td   data-f="3966767266517324">3.397</td>
+<td   data-f="012758807288286">42.013</td>
+<td   data-f="5285045269932802" data-i="1" >1.529</td>
+<td   data-f="3966767266517337">3.397</td>
+<td   data-f="01275880728828">42.013</td>
+<td   data-f="846194465147515" data-i="1" >1.846</td>
+<td   data-f="102654366994478">4.103</td>
+<td   data-f="17002148659243">38.170</td>
+</tr>
+<tr>
+<td   data-d="0">8</td>
+<td   data-f="432633878145377">1.433</td>
+<td   data-f="1836308403230595">3.184</td>
+<td   data-f="19638964761135">45.196</td>
+<td   data-f="4326338781453771">1.433</td>
+<td   data-f="1836308403230604">3.184</td>
+<td   data-f="19638964761134">45.196</td>
+<td   data-f="8188715376804825" data-i="1" >1.819</td>
+<td   data-f="041936750401072">4.042</td>
+<td   data-f="2119582369935">42.212</td>
+</tr>
+<tr>
+<td  data-d="0">9</td>
+<td  data-f="2849833989914734">1.285</td>
+<td  data-f="8555186644254964" data-i="2" >2.856</td>
+<td  data-f="05190831203684">48.052</td>
+<td  data-f="2849833989914736">1.285</td>
+<td  data-f="855518664425497" data-i="2" >2.856</td>
+<td  data-f="051908312036836">48.052</td>
+<td  data-f="8083225368002616" data-i="1" >1.808</td>
+<td  data-f="018494526222804">4.018</td>
+<td  data-f="230452763216306">46.230</td>
+</tr>
+<tr>
+<td  data-d="0">10</td>
+<td  data-f="2317317578892608">1.232</td>
+<td  data-f="737181684198357" data-i="2" >2.737</td>
+<td  data-f="7890899962352" data-i="50" >50.789</td>
+<td  data-f="2317317578892613">1.232</td>
+<td  data-f="7371816841983585" data-i="2" >2.737</td>
+<td  data-f="7890899962352" data-i="50" >50.789</td>
+<td  data-f="5713383071602174" data-i="1" >1.571</td>
+<td  data-f="491862904800483">3.492</td>
+<td  data-f="72231566801679" data-i="49" >49.722</td>
+</tr>
+<tr>
+<td  data-d="0">11</td>
+<td  data-f="153739160921168">1.154</td>
+<td  data-f="56386480204704" data-i="2" >2.564</td>
+<td  data-f="35295479828224">53.353</td>
+<td  data-f="153739160921168">1.154</td>
+<td  data-f="56386480204704" data-i="2" >2.564</td>
+<td  data-f="35295479828224">53.353</td>
+<td  data-f="5246911584865088" data-i="1" >1.525</td>
+<td  data-f="3882025744144637">3.388</td>
+<td  data-f="110518242431255">53.111</td>
+</tr>
+<tr>
+<td  data-d="0">12</td>
+<td  data-f="136990889155982">1.137</td>
+<td  data-f="5266464203466263" data-i="2" >2.527</td>
+<td  data-f="87960121862886" data-i="55" >55.880</td>
+<td  data-f="1369908891559815">1.137</td>
+<td  data-f="5266464203466255" data-i="2" >2.527</td>
+<td  data-f="87960121862886" data-i="55" >55.880</td>
+<td  data-f="2460873392889242">1.246</td>
+<td  data-f="7690829761976095" data-i="2" >2.769</td>
+<td  data-f="87960121862886" data-i="55" >55.880</td>
+</tr>
+<tr>
+<td  data-d="0">13</td>
+<td  data-f="0824598456989138">1.082</td>
+<td  data-f="405466323775364">2.405</td>
+<td  data-f="28506754240423">58.285</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">14</td>
+<td  data-f="0138094701750768">1.014</td>
+<td  data-f="252909933722393">2.253</td>
+<td  data-f="53797747612662" data-i="60" >60.538</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">15</td>
+<td  data-f="9798723440165331" data-i="0" >.980</td>
+<td  data-f="177494097814518">2.177</td>
+<td  data-f="71547157394114" data-i="62" >62.715</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">16</td>
+<td  data-f="9423866768319233" data-i="0" >.942</td>
+<td  data-f="0941926151820516">2.094</td>
+<td  data-f="80966418912318" data-i="64" >64.810</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">17</td>
+<td  data-f="8758030794089463" data-i="0" >.876</td>
+<td  data-f="9462290653532142" data-i="1" >1.946</td>
+<td  data-f="75589325447639" data-i="66" >66.756</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">18</td>
+<td  data-f="8690999332518027" data-i="0" >.869</td>
+<td  data-f="9313331850040059" data-i="1" >1.931</td>
+<td  data-f="6872264394804" data-i="68" >68.687</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">19</td>
+<td  data-f="8219970109869837" data-i="0" >.822</td>
+<td  data-f="8266600244155193" data-i="1" >1.827</td>
+<td  data-f="51388646389591" data-i="70" >70.514</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">20</td>
+<td  data-f="8074654094720385" data-i="0" >.807</td>
+<td  data-f="79436757660453" data-i="1" >1.794</td>
+<td  data-f="30825404050044">72.308</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">21</td>
+<td  data-f="781752766471706" data-i="0" >.782</td>
+<td  data-f="7372283699371245" data-i="1" >1.737</td>
+<td  data-f="04548241043757">74.045</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">22</td>
+<td  data-f="7182080253342286" data-i="0" >.718</td>
+<td  data-f="5960178340760633" data-i="1" >1.596</td>
+<td  data-f="64150024451364" data-i="75" >75.642</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">23</td>
+<td  data-f="6894489701574511" data-i="0" >.689</td>
+<td  data-f="5321088225721136" data-i="1" >1.532</td>
+<td  data-f="17360906708575">77.174</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">24</td>
+<td  data-f="6767981067396001" data-i="0" >.677</td>
+<td  data-f="5039957927546668" data-i="1" >1.504</td>
+<td  data-f="67760485984041" data-i="78" >78.678</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">25</td>
+<td  data-f="651174974238119" data-i="0" >.651</td>
+<td  data-f="447055498306931">1.447</td>
+<td  data-f="12466035814735">80.125</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">26</td>
+<td  data-f="6263669406950584" data-i="0" >.626</td>
+<td  data-f="3919265348779075">1.392</td>
+<td  data-f="51658689302526" data-i="81" >81.517</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">27</td>
+<td  data-f="6104242784213209" data-i="0" >.610</td>
+<td  data-f="3564983964918242">1.356</td>
+<td  data-f="87308528951709" data-i="82" >82.873</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">28</td>
+<td  data-f="599497847157331" data-i="0" >.599</td>
+<td  data-f="3322174381274021">1.332</td>
+<td  data-f="2053027276445">84.205</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">29</td>
+<td  data-f="5653626239841782" data-i="0" >.565</td>
+<td  data-f="2563613866315073">1.256</td>
+<td  data-f="461664114276">85.462</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">30</td>
+<td  data-f="5547735422588539" data-i="0" >.555</td>
+<td  data-f="2328300939085641">1.233</td>
+<td  data-f="69449420818457" data-i="86" >86.694</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">31</td>
+<td  data-f="5393965488970335" data-i="0" >.539</td>
+<td  data-f="1986589975489632">1.199</td>
+<td  data-f="89315320573353" data-i="87" >87.893</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">32</td>
+<td  data-f="526179024019779" data-i="0" >.526</td>
+<td  data-f="1692867200439534">1.169</td>
+<td  data-f="06243992577748">89.062</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">33</td>
+<td  data-f="5036946742955964" data-i="0" >.504</td>
+<td  data-f="1193214984346587">1.119</td>
+<td  data-f="18176142421214">90.182</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">34</td>
+<td  data-f="49417767007361196">.494</td>
+<td  data-f="098172600163582">1.098</td>
+<td  data-f="27993402437572">91.280</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">35</td>
+<td  data-f="46530750994700776">.465</td>
+<td  data-f="0340166887711284">1.034</td>
+<td  data-f="31395071314685">92.314</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">36</td>
+<td  data-f="439157397036517">.439</td>
+<td  data-f="9759053267478156" data-i="0" >.976</td>
+<td  data-f="28985603989467">93.290</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">37</td>
+<td  data-f="4259053165160368">.426</td>
+<td  data-f="9464562589245263" data-i="0" >.946</td>
+<td  data-f="2363122988192">94.236</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">38</td>
+<td  data-f="40037610053800093">.400</td>
+<td  data-f="8897246678622243" data-i="0" >.890</td>
+<td  data-f="12603696668143">95.126</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">39</td>
+<td  data-f="3940864557751316">.394</td>
+<td  data-f="8757476795002925" data-i="0" >.876</td>
+<td  data-f="00178464618172">96.002</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">40</td>
+<td  data-f="356292004311162">.356</td>
+<td  data-f="79176000958036" data-i="0" >.792</td>
+<td  data-f="79354465576208" data-i="96" >96.794</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">41</td>
+<td  data-f="3394770764186197">.339</td>
+<td  data-f="7543935031524882" data-i="0" >.754</td>
+<td  data-f="54793815891456" data-i="97" >97.548</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">42</td>
+<td  data-f="3148813911123707">.315</td>
+<td  data-f="6997364246941571" data-i="0" >.700</td>
+<td  data-f="24767458360871">98.248</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">43</td>
+<td  data-f="3084155805891804">.308</td>
+<td  data-f="6853679568648453" data-i="0" >.685</td>
+<td  data-f="93304254047356" data-i="98" >98.933</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">44</td>
+<td  data-f="24944364930116034">.249</td>
+<td  data-f="5543192206692452" data-i="0" >.554</td>
+<td  data-f="48736176114281">99.487</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+<tr>
+<td  data-d="0">45</td>
+<td  data-f="23068720748573393">.231</td>
+<td  data-f="5126382388571865" data-i="0" >.513</td>
+<td>100.000</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+</tr>
+</tbody><tfoot style="display:table-footer-group">
+<tr>
+<td class="caption"  colspan="10">擷取方法：主成分分析。</td>
+</tr>
+<tr>
+<td   style="width:48px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+<td   style="width:69px;padding:0px;border-spacing:0px"></td>
+<td   style="width:67px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tfoot>
+</table>

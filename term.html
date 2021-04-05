@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        svg {
+            background: rgba(174, 224, 224, 0.603);
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container mt-5'>
+        <div class='d-flex flex-column justify-content-center align-items-center'>
+            <svg></svg>
+            <h3 class='my-3'>各遊戲<span id='area'>contnet</span>與<span id='y-axis'>contn</span>散點圖</h3>
+            <p>Hint: 游標移到點點上可以查看遊戲詳細資料！</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div>
+                <div class='my-3'>
+                    Y軸：
+                    <button class='btn btn-outline-info'
+                        onclick="y_selected='發行年份';console.log(y_selected);main()">發行年份</button>
+                    <button class='btn btn-outline-info'
+                        onclick="y_selected='種類';console.log(y_selected);main()">遊戲種類</button>
+                    <button class='btn btn-outline-info'
+                        onclick="y_selected='發行平台';console.log(y_selected);main()">發行平台</button>
+                </div>
+                <div class='my-3'>
+                    地區：
+                    <button class='btn btn-outline-info'
+                        onclick="x_selected='全球銷售量';console.log(x_selected);main()">Global</button>
+                    <button class='btn btn-outline-info'
+                        onclick="x_selected='日本地區銷售量';console.log(x_selected);main()">Japan</button>
+                    <button class='btn btn-outline-info'
+                        onclick="x_selected='歐洲地區銷售量';console.log(x_selected);main()">Europe</button>
+                    <button class='btn btn-outline-info'
+                        onclick="x_selected='北美地區銷售量';console.log(x_selected);main()">US</button>
+                    <button class='btn btn-outline-info'
+                        onclick="x_selected='其他地區銷售量';console.log(x_selected);main()">Other</button>
+                </div>
+            </div>
+            <div class='p-4 d-flex flex-row justify-content-center align-items-center'>
+                <div id='data' class='d-flex justify-content-center align-items-center'></div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let x_selected = '全球銷售量';
+        let y_selected = '發行年份';
+
+        let main = () => {
+            const area = document.getElementById('area')
+            const y_axis = document.getElementById('y-axis')
+            area.innerHTML = x_selected
+            y_axis.innerHTML = y_selected
+
+            d3.select("svg").selectAll("*").remove();
+            d3.csv("https://raw.githubusercontent.com/joannachou713/machinglearning/master/new_vgsale.csv", function (d) {
+                // console.log(d)
+                data = []
+                var width = 1000
+                var height = 650
+                for (i = 0; i < 100; i++) {
+                    data.push(d[i])
+                }
+                console.log(data)
+
+                let switchY = (d) => {
+                    switch (y_selected) {
+                        case '發行年份':
+                            return d.Year;
+                            break;
+                        case '發行平台':
+                            return d.platform_n;
+                            break;
+                        case '種類':
+                            return d.genre_n;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                let switchX = (d) => {
+                    switch (x_selected) {
+                        case '全球銷售量':
+                            return d.Global_Sales ** 1.1;
+                            break;
+                        case '日本地區銷售量':
+                            return d.JP_Sales ** 2;
+                            break;
+                        case '歐洲地區銷售量':
+                            return d.EU_Sales ** 1.5;
+                            break;
+                        case '北美地區銷售量':
+                            return d.NA_Sales ** 1.3;
+                            break;
+                        case '其他地區銷售量':
+                            return d.Other_Sales ** 2;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                let cy = (d) => {
+                    switch (y_selected) {
+                        case '發行年份':
+                            return -(d.Year - 2100) * 15 - 1200
+                            break;
+                        case '種類':
+                            return d.genre_n * 58;
+                            break;
+                        case '發行平台':
+                            return d.platform_n * 35;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                // let switchRange = (d) => {
+                //     switch (y_selected) {
+                //         case 'year':
+                //             return [500, 0]
+                //             break;
+                //         case 'platform':
+                //             return [12, 0];
+                //             break;
+                //         case 'genre':
+                //             return [20, 0];
+                //             break;
+                //         default:
+                //             break;
+                //     }
+                // }
+
+                var svg = d3.select('svg')
+                    .attr("width", width)
+                    .attr("height", height)
+                let scaleColor = d3.scale.category20()
+
+                var tooltip = d3.select("#data")
+
+                svg.selectAll("circle")
+                    .data(data)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", function (d) { return switchX(d) * 6 + 120 })
+                    .attr("cy", d => cy(d)) //上下顛倒了
+                    .attr("r", function (d) {
+                        return d.Global_Sales ** 1.3 / 5
+                    })
+                    .style("opacity", 0.7)
+                    .style("stroke-width", 0.5)
+                    .attr("stroke", "white")
+                    .attr("fill", (d) => scaleColor(d.Genre))
+
+                    .on("mousemove", function (d) {
+                        var xPosition = d3.mouse(this)[0] - 15;
+                        var yPosition = d3.mouse(this)[1] - 25;
+                        tooltip.attr("fill", scaleColor(d.Genre))
+                        tooltip.html(`<table class='table'>
+                                    <tr class='table-primary'><td colspan='4'>${d.Name}</td></tr>
+                                    <tr>
+                                        <td>Rank: </td><td style="text-align: right">${d.Rank}</td>
+                                        <td>Global Sales: </td><td style="text-align: right">${d.Global_Sales}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other Sales: </td><td style="text-align: right">${d.Other_Sales}</td>
+                                        <td>JP Sales: </td><td style="text-align: right">${d.JP_Sales}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EU Sales: </td><td style="text-align: right">${d.EU_Sales}</td>
+                                        <td>NA Sales: </td><td style="text-align: right">${d.NA_Sales}</td>
+                                    </tr>
+                                </table>`
+                        );
+                    });
+
+
+
+                var x = d3.scale.linear()
+                    .domain([0, 100]) //只取一百名
+                    .range([0, d3.max(data, function (d) {
+                        return switchX(d) * 6 + 13
+                    })]);
+
+                let switchXdomain = () => {
+                    switch (x_selected) {
+                        case '全球銷售量':
+                            return [0, 100]
+                            break;
+                        case '歐洲地區銷售量':
+                            return [0, 100]
+                            break;
+                        case '日本地區銷售量':
+                            return [0, 100]
+                            break;
+                        case '北美地區銷售量':
+                            return [0, 100]
+                            break;
+                        case '其他地區銷售量':
+                            return [0, 100]
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+
+                var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .tickPadding(12)
+                    .ticks(5);
+
+                svg.append("g")
+                    .attr("fill", "#9b8a81")
+                    .attr("class", "x axis")
+                    .attr("transform", "translate(120," + 575 + ")")
+                    .call(xAxis);
+
+
+                //設定遊戲種類y軸的間距
+                let genre_gap = [...Array(12).keys()].map(i => i * 50 - 50)
+                //設定平台y軸的間距
+                let platform_gap = [...Array(31).keys()].map(i => i * 20 - 50)
+                //設定y軸變化依據
+                var y = () => {
+                    switch (y_selected) {
+                        case '發行年份':
+                            return d3.scale.linear()
+                                .domain([d3.min(data, d => switchY(d)), d3.max(data, d => switchY(d))])
+                                .range([500, 0]);
+                            break;
+
+                        case '種類':
+                            return d3.scale.ordinal()
+                                .domain(['Sports', 'Platform', 'Racing', 'Role-Playing',
+                                    'Puzzle', 'Misc', 'Shooter', 'Simulation', 'Action',
+                                    'Fighting', 'Adventure', 'Strategy'])
+                                .range(genre_gap);
+                            break;
+                        case '發行平台':
+                            return d3.scale.ordinal()
+                                .domain(['Wii', 'NES', 'GB', 'DS', 'X360', 'PS3', 'PS2',
+                                    'SNES', 'GBA', '3DS', 'PS4', 'N64', 'PS', 'XB', 'PC',
+                                    '2600', 'PSP', 'XOne', 'GC', 'WiiU', 'GEN', 'DC', 'PSV',
+                                    'SAT', 'SCD', 'WS', 'NG', 'TG16', '3DO', 'GG', 'PCFX'])
+                                .range(platform_gap);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+
+
+                // Define and draw axes
+                var yAxis = d3.svg.axis()
+                    .scale(y())
+                    .orient("left")
+                    .ticks(5)
+                    .tickSize(-width, 0, 0)
+
+                svg.append("g")
+                    .attr("class", "y axis")
+                    .attr("fill", "#9b8a81")
+                    .attr("transform", "translate(50," + 75 + ")")
+                    .call(yAxis);
+
+
+            })
+
+        }
+        main()
+
+    </script>
+</body>
+
+</html>

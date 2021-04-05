@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Information Visualization</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            background-color: #20153b;
+            padding-bottom: 30px;
+        }
+
+        g {
+            padding-right: 10px;
+        }
+
+        .activate {
+            font-size: 20px !important;
+            transition: all 0.5s;
+        }
+
+        text {
+            width: 20px;
+            height: 20px;
+        }
+
+        .title{
+            color: #60e984
+        }
+
+        .subtitle{
+            color: #ff8fc3
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class='container mt-3'>
+        <h1 class='title'>武漢肺炎當日各地確診人數</h1>
+        <div class='d-flex text-light w-75'>
+            <div class='mr-3 subtitle'>日期選擇</div>
+            <select class='col-6'>
+                <option></option>
+            </select>
+        </div>
+    </div>
+    <div class='container mt-3'>
+
+    <svg>
+    </svg>
+
+    <div class='container'>
+        <h3 class='title'>資料來源：<a href='https://github.com/CSSEGISandData/COVID-19'>https://github.com/CSSEGISandData/COVID-19</a></h3>
+        <h3 class='title mt-3'>說明</h3>
+        <div class='m-3 subtitle'>本圖顯示從2020/1/22到現在每日全球各地確診人數前十二高之國家，並且由高至低排列，確診人數較高者為綠色，
+            確診人數較低為淺藍色。但由於中國湖北省的確診人數過高，導致其他國家的差異看起來較為低落。另外有趣的是湖北在這筆資料集內，
+            從3/18到現在的確診人數都維持在67800，相較於確診人數不斷增長的歐洲國家穩定了許多，不愧是我大中國大陸。</div>
+    </div>
+
+
+    <script type="text/javascript">
+        // const link = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
+        const link = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+
+        // let date = '3/20/20'
+        let dailyInfo
+        let dateList = []
+
+        let getData = (selectedDate) => {
+            dailyInfo = []
+            return d3.csv(link, (data) => {
+                dateList = Object.keys(data)
+
+                dailyInfo.push({
+                    'region': data['Country/Region'],
+                    'state': data['Province/State'] == data['Country/Region'] ? '' : data['Province/State'],
+                    'lat': 90 - parseFloat(data['Lat']),
+                    'long': parseFloat(data['Long']),
+                    'num': parseFloat(data[selectedDate])
+                })
+            })
+        }
+
+        let init = () => {
+            d3.select("svg").selectAll("*").remove();
+
+            dailyInfo = dailyInfo.sort(function (a, b) {
+                return a['num'] < b['num'] ? 1 : -1;
+            });
+
+            dateList = dateList.slice(3)
+            dateList[0] = 'Select Date'
+            console.log(dateList)
+            let select = d3.select('select').selectAll('option')
+                .data(dateList)
+                .enter()
+                .append('option')
+                .text(d => d)
+
+            let map = d3.select('svg')
+            map.style("width", '1260px').style("height", '700px')
+
+            let yScale = d3.scaleLinear()
+                .domain([0, dailyInfo[0]['num']])
+                .range([0, 500])
+
+            let scaleColor = d3.scaleLinear()
+                .domain([0, dailyInfo[0]['num']])
+                .range(['#60dbe9', '#60e984'])
+
+            let countrySet = map.selectAll('circle').data(dailyInfo).enter().append('g')
+            countrySet.append('rect')  //.text(d=>d['region'])
+                .attr("x", (d, i) => (i + 1) * 100 + 10)
+                .attr("height", (d) => yScale(d.num))
+                .attr("y", (d) => -yScale(d.num) + 580)
+                .attr("fill", (d) => scaleColor(d.num))
+                .attr("width", 30)
+            countrySet.append('text').text(d => d['region'])
+                .attr("x", (d, i) => (i + 1) * 100 + 10)
+                .attr("y", 600)
+                .attr("fill", "white")
+            countrySet.append('text').text(d => d['state'])
+                .attr("x", (d, i) => (i + 1) * 100 + 10)
+                .attr("y", 620)
+                .attr("fill", "white")
+            countrySet.append('text').text(d => d['num'])
+                .attr("x", (d, i) => (i + 1) * 100 + 10)
+                .attr("y", 640)
+                .attr("fill", "white")
+            countrySet.style('font-size', "13px")
+                .style("opacity", 0)
+                .transition()
+                .duration(1000)
+                .delay((d, i) => i * 200)
+                .style("opacity", 1)
+
+
+            axisLis = []
+            let axisGroup = map.append("g").attr("class", "axis")
+                .style("transform", "translateY(430px)")
+                .selectAll("line.axis")
+                .data(d3.range(14).map((d, i) => 5000 * i))
+                .enter()
+
+            axisGroup.append("line")
+                .attr("class", "axis")
+                .attr("stroke", "#865cef")
+                .attr("x1", 0)
+                .attr("x2", 1260)
+                .attr("y1", (d, i) => -yScale(d) + 150)
+                .attr("y2", (d, i) => -yScale(d) + 150)
+                .attr("stroke-dasharray", "5 5")
+                .style("opacity", 0.3)
+
+            axisGroup.append("text")
+                .text(d => d)
+                .attr("x", 0)
+                .attr("y", (d, i) => -yScale(d) + 150)
+                .attr("fill", "#865cef")
+                .style("opacity", 0.5)
+        }
+
+
+        let select = document.querySelector('select')
+        select.addEventListener('change', (e) => {
+            date = e.target.value
+            getData(date).then(() => {
+
+
+                init()
+            })
+        })
+
+        getData('3/20/20').then(() => {
+
+            init()
+        })
+
+    </script>
+
+</body>
